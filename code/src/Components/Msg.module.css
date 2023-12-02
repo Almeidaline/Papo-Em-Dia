@@ -1,0 +1,74 @@
+.msgA,
+.msgB {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: .8rem;
+}
+
+.msgB {
+  flex-direction: row-reverse;
+}
+
+.msgA img,
+.msgB img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10% 30%;
+  object-fit: cover;
+}
+
+.msgB img {
+  border-radius: 30% 10%;
+}
+
+.msgA .content,
+.msgB .content {
+  max-width: 70%;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.msgB .content {
+  align-items: end;
+}
+
+.msgA .content p,
+.msgB .content p {
+  padding: .4rem .6rem;
+  color: var(--FourColor);
+  font-size: .9rem;
+  font-weight: 400;
+  background: var(--TwoColor);
+  border-radius: .1rem .5rem .5rem;
+}
+
+.msgB .content p {
+  color: var(--OneColor);
+  background: var(--ThreeColor);
+  border-radius: .5rem .1rem .5rem .5rem;
+}
+
+@media screen and (max-width: 769px) {
+  .msgA .content,
+  .msgB .content {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .msgA,
+  .msgB {
+    gap: .5rem;
+  }
+  .msgA img,
+  .msgB img {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .msgA .content p,
+  .msgB .content p {
+    font-size: .75rem;
+  }
+}

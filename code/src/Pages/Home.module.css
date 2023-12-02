@@ -1,0 +1,37 @@
+.home {
+  width: 100vw;
+  min-height: 100vh;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  background: var(--OneColor);
+  overflow: hidden;
+}
+
+.home .homeHeader {
+  height: 4rem;
+}
+
+.home .homeMain {
+  display: flex;
+  gap: .5rem;
+  flex: 1;
+}
+
+.home .homeMain .homeContact {
+  width: 35%;
+}
+
+.home .homeMain .homeChat {
+  width: 65%;
+}
+
+@media screen and (max-width: 426px) {
+  .home .homeMain .homeContact {
+    width: 28%;
+  }
+  .home .homeMain .homeChat {
+    width: 72%;
+  }
+}

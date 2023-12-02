@@ -1,0 +1,29 @@
+.chatMsg {
+  flex: 1;
+}
+
+.chatMsg .messages {
+  width: 100%;
+  height: calc(100vh - 12.5rem);
+  padding: .5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.chatMsg .messages::-webkit-scrollbar {
+  width: .3rem;
+  background: transparent;
+}
+
+.chatMsg .messages::-webkit-scrollbar-thumb {
+  background: var(--ThreeColor);
+  border-radius: 1rem;
+}
+
+@media screen and (width: 426px) {
+  .chatMsg .messages {
+    padding: .5rem;
+  }
+}

@@ -1,0 +1,83 @@
+.chatList {
+  width: 100%;
+  max-height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.chatList::-webkit-scrollbar {
+  width: .3rem;
+  background: transparent;
+}
+
+.chatList::-webkit-scrollbar-thumb {
+  background: var(--ThreeColor);
+  border-radius: 1rem;
+}
+
+.chatList .userChat {
+  width: 100%;
+  padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.chatList .userChat:hover {
+  background: var(--TwoColor);
+}
+
+.chatList .userChat img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  border-radius: 30% 10%;
+}
+
+.chatList .userChat .info {
+  max-width: 100%;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.chatList .userChat .info h5 {
+  color: var(--ThreeColor);
+  font-size: .95rem;
+  font-weight: 400;
+}
+
+.chatList .userChat:hover .info h5 {
+  color: var(--FourColor);
+}
+
+.chatList .userChat .info p {
+  font-size: .7rem;
+  color: var(--TwoColor);
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.chatList .userChat:hover .info p {
+  color: var(--ThreeColor);
+}
+
+@media screen and (max-width: 426px) {  
+  .chatList .userChat {
+    padding: .5rem;
+    flex-direction: column;
+    gap: .1rem;
+  }
+  .chatList .userChat .info h5 {
+    text-align: center;
+    font-size: .8rem;
+  }  
+  .chatList .userChat .info p {
+    display: none;
+  }
+}

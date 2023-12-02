@@ -1,0 +1,9 @@
+.contact {
+  width: 100%;
+  height: calc(100vh - 5.5rem);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 1rem var(--FourColor);
+  border-radius: 1rem;
+  overflow: hidden;
+}
